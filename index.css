@@ -1,0 +1,323 @@
+/* RESET - ZERA MARGEM E PADDING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definir fontes e propriedades globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #A680FF;
+    color: #A680FF;
+    line-height: 1.6;
+}
+
+/* Container Comum */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #14083A; /* Rosa suave */
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid #f8bbd0; /* Linha rosa clara para separação */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+header .logo h1 {
+    font-size:6rem; /* Aumentamos o tamanho do título */
+    margin-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0px; /* Maior espaçamento entre as letras */
+    font-weight: 800; /* Peso maior para dar mais impacto */
+    color: transparent; /* Inicialmente o texto será transparente */
+    background: linear-gradient(45deg, hsl(315, 93%, 43%), #dbc7e9); /* Gradiente de rosa suave */
+    background-clip: text; /* Faz o gradiente se aplicar somente no texto */
+    -webkit-background-clip: text; /* Suporte para Webkit */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+header .logo h1:hover {
+    transform: scale(1.05); /* Leve aumento de tamanho */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Animação de entrada do título */
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header .logo h1 {
+    animation: titleAnimation 1s ease-out;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f8bbd0;
+}
+
+/* Seções principais */
+.section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #14083A;
+    border-top: 1px solid #f8bbd0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #bda1ff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Cardápio de Produtos - Imagens */
+.produto-imagem-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+.produto-imagem {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.produto-imagem img:hover {
+    transform: scale(1.1);
+}
+
+/* Produtos */
+.produtos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    justify-items: center;
+}
+
+.produto {
+    background-color: #9A81DF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 1px solid #FFB071;
+    max-width: 280px;
+    width: 100%;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.produto h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.produto p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.produto button {
+    background-color: #5a2a75e8;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.produto button:hover {
+    background-color: #f8bbd0;
+    transform: scale(1.05);
+}
+
+.produto button:active {
+    background-color: #f06292;
+    transform: scale(0.98);
+}
+
+/* Carrinho */
+#carrinho {
+    background-color: #14083A;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#carrinho ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#carrinho p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f06292;
+    margin-bottom: 20px;
+}
+
+#carrinho button {
+    background-color: #f06292;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#carrinho button:hover {
+    background-color: #f8bbd0;
+    transform: scale(1.05);
+}
+
+#carrinho button:active {
+    background-color: #f06292;
+    transform: scale(0.98);
+}
+
+/* Rodapé */
+footer {
+    background-color: #f06292;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .produto-imagem-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .produtos-lista {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .produto {
+        padding: 15px;
+        max-width: 220px;
+    }
+
+    #carrinho {
+        padding: 20px;
+    }
+
+    #carrinho button {
+        width: 100%;
+    }
+}
+/* Estilos para o Banner */
+#inicio {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* Faz com que o banner ocupe toda a altura da tela */
+    background-image: url('Images/Banner\ para\ site\ de\ frete\ grátis\ colorido\ roxo\ \(3\).png'); /* Imagem do banner */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#inicio .banner-conteudo {
+    max-width: 80%;
+}
+
+#inicio h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Outras regras do seu CSS */
